@@ -2,3 +2,16 @@
 A Squid proxy server deployed on a US-based Amazon EC2 instance, designed to enable access to US-hosted services and region-restricted content that may not be available from UK or other international IP addresses. This project is intended strictly for educational and legitimate use cases and is not designed for or intended to support malicious activity.
 
 The server is hosted on a Linux environment and incorporates key proxy features such as Access Control Lists (ACLs) for traffic filtering, basic authentication for controlled access, and detailed access logging for monitoring and auditing usage. Users connect to the proxy server prior to browsing, routing their traffic through the EC2 instance. As a result, outbound requests appear to originate from a US-based IP address within the EC2 network, enabling access to geographically restricted services.
+
+Features
+US-based IP routing via EC2 instance
+Access Control Lists (ACLs) for traffic filtering
+Basic authentication for controlled user access
+Access logging for monitoring and auditing
+Customisable Remote Squid configuration.
+
+ARCHITECTURE
+Client Device → Squid Proxy (EC2 - US) → Internet
+
+Logging And Monitoring
+Logging is default on Squid, live montoring of requests can be made through the following command tar - f /var/log/squid/access.log
